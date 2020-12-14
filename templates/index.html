@@ -19,7 +19,13 @@
     <h3>{{ mars.news_title }}</h3>
     <h3>{{ mars.news_p}}</h3>
     <img src="{{ mars.featured_image_url}}">
-    {{mars.mars_facts|safe}}
+    <h4>{{mars.mars_facts|safe}}</h4>
+    {%for hemisphere in mars.hemisphere_urls%}
+      <h2>{{hemisphere.title}}</h2>
+      <br>
+      <img src= "{{hemisphere.img_url}}">
+      <br>
+    {%endfor%}
   </div>
   </div>
 </body>
